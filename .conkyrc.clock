@@ -12,7 +12,7 @@ conky.config = {
 	total_run_times = 0,
 	use_xft = true,
 	xftalpha = 1.0,
-	font = 'DejaVu Sans Mono:bold:size=12',
+	font = 'DejaVu Sans Mono:bold:size=11',
 	own_window = true,
 	own_window_title = 'ConkyClock',
 	own_window_type = 'dock',
