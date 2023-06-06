@@ -1,0 +1,26 @@
+conky.config = {
+	alignment = 'bottom_right',
+	default_color = 'white',
+	background = false,
+	draw_borders = false,
+	gap_x = 6,
+	gap_y = 3,
+	draw_outline = true,
+	default_outline_color = '#000000',
+	double_buffer = true,
+	update_interval = 1,
+	total_run_times = 0,
+	use_xft = true,
+	xftalpha = 1.0,
+	font = 'DejaVu Sans Mono:bold:size=12',
+	own_window = true,
+	own_window_title = 'ConkyClock',
+	own_window_type = 'dock',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+};
+
+conky.text = [[
+${time %d.%m %a %I:%M:%S}
+]];
