@@ -1,5 +1,6 @@
+### ### ### ### ### ### ### vim configuration (for usage as ~/.vimrc and /root/.vimrc)
+
 syntax on
-language en_US.utf8
 set clipboard=autoselect	" use X PRIMARY selection
 set noswapfile			" disable swap file
 set shortmess+=I		" disable intro message
@@ -51,7 +52,7 @@ hi StatusLineNC ctermbg=NONE ctermfg=gray cterm=NONE
 hi Visual ctermfg=NONE ctermbg=black cterm=bold,standout
 hi VertSplit ctermfg=white ctermbg=NONE cterm=underline
 
-" COMMANDS                      MODES ~
+" COMMANDS                      MODES
 ":map     :noremap  :unmap     Normal, Visual, Select, Operator-pending
 ":nm[ap]  :nnoremap :nunmap    Normal
 ":vm[ap]  :vnoremap :vunmap    Visual and Select
