@@ -1,4 +1,4 @@
-### ### ### ### ### ### ### vim configuration (for usage as ~/.vimrc and /root/.vimrc)
+""" """ """ """ """ """ """ vim configuration (for usage as ~/.vimrc and /root/.vimrc)
 
 syntax on
 set clipboard=autoselect	" use X PRIMARY selection
