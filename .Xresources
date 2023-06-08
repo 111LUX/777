@@ -14,7 +14,7 @@ XTerm*utf8Title:			true
 XTerm*termName:				xterm-256color
 XTerm*loginShell:			true
 XTerm*activeIcon:			false
-XTerm*faceName:				DejaVu Sans Mono:size=9
+XTerm*faceName:				DejaVu Sans Mono:size=10
 XTerm*Foreground:			#ffffff
 XTerm*Background:			#0D0D0D
 XTerm*geometry:				77x22
@@ -76,7 +76,7 @@ XTerm*color15:				#ffffff
 !URxvt.termName:			rxvt-256color
 URxvt.termName:				rxvt-unicode
 URxvt.loginShell:			true
-URxvt.font:				xft:DejaVu Sans Mono:slant=0:weight=100:size=9:antialias=True:autohint=True
+URxvt.font:				xft:DejaVu Sans Mono:slant=0:weight=100:size=10:antialias=True:autohint=True
 URxvt.depth:				32
 URxvt.background:			[77]#0D0D0D
 URxvt.foreground:			#ffffff
