@@ -1,2 +1,3 @@
-## This page contains my configuration files of my favorite applications.
-## vimrc, zshrc, tmux.conf... etc. 
+## Configuration files
+** This page contains my configuration files of my favorite applications:**  
+vim, zsh, tmux...
