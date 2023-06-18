@@ -59,8 +59,8 @@ XTerm*color10:				#00d700
 XTerm*color3:				#d78700
 XTerm*color11:				#d7d700
 ! BLUE
-XTerm*color4:				#000087
-XTerm*color12:				#0000d7
+XTerm*color4:				#0000d7
+XTerm*color12:				#005fd7
 ! MAGENTA
 XTerm*color5:				#8700d7
 XTerm*color13:				#d700d7
@@ -160,8 +160,8 @@ URxvt.keysym.C-M-Right:			\033[1;7C
 *color3:				#d78700
 *color11:				#d7d700
 ! BLUE
-*color4:				#000087
-*color12:				#0000d7
+*color4:				#0000d7
+*color12:				#005fd7
 ! MAGENTA
 *color5:				#8700d7
 *color13:				#d700d7
