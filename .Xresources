@@ -50,26 +50,26 @@ XTerm*VT100*translations:    #override \
 XTerm*color0:				#080808
 XTerm*color8:				#767676
 ! RED
-XTerm*color9:				#E61F1A
 XTerm*color1:				#d70000
+XTerm*color9:				#E61F1A
 ! GREEN
-XTerm*color10:				#00D700
 XTerm*color2:				#00af00
+XTerm*color10:				#00D700
 ! YELLOW
-XTerm*color11:				#d7ff00
 XTerm*color3:				#ffd700
+XTerm*color11:				#d7ff00
 ! BLUE
-XTerm*color12:				#005fff
 XTerm*color4:				#005fd7
+XTerm*color12:				#005fff
 ! MAGENTA
-XTerm*color13:				#af00ff
 XTerm*color5:				#8700d7
+XTerm*color13:				#af00ff
 ! CYAN
-XTerm*color14:				#00d7ff
 XTerm*color6:				#00AFD7
+XTerm*color14:				#00d7ff
 ! WHITE
-XTerm*color15:				#ffffff
 XTerm*color7:				#ffd7d7
+XTerm*color15:				#ffffff
 
 
 ! URxvt ------------------------------------------------
