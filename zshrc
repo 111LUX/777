@@ -8,8 +8,8 @@
 #(( $+commands[tmux] )) &&  [[ $UID -ne 0 && ! $TMUX ]] && exec tmux -2
 export PAGER=less LESS='-gicAQR'
 export EDITOR=vim
-export LS_COLORS='di=1;32:ln=1;35:so=1;33:pi=1;31:ex=1;34:bd=1;34;40:cd=1;35;40:su=30;42:sg=37;42:tw=30;46:ow=31;46'
-#export LSCOLORS=CxFxDxBxExEaFaachcagbg CLICOLOR=1
+export LS_COLORS='di=32:ln=35:so=33:pi=31:ex=34:bd=34;40:cd=35;40:su=30;42:sg=37;42:tw=30;46:ow=31;46'
+#export LSCOLORS=cxfxdxbxexeafaachcagbg CLICOLOR=1
 
 # auto logout after 1h of inactivity
 TMOUT=3600
