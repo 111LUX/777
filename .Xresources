@@ -47,28 +47,28 @@ XTerm*VT100*translations:    #override \
 
 ! XTerm color scheme ----------------------------
 ! BLACK
-XTerm*color0:				#000000
-XTerm*color8:				#808080
+XTerm*color0:				#080808
+XTerm*color8:				#767676
 ! RED
-XTerm*color1:				#870000
 XTerm*color9:				#d70000
+XTerm*color1:				#E61F1A
 ! GREEN
-XTerm*color2:				#008700
-XTerm*color10:				#00d700
+XTerm*color10:				#00af00
+XTerm*color2:				#00D700
 ! YELLOW
-XTerm*color3:				#d78700
-XTerm*color11:				#d7d700
+XTerm*color11:				#ffd700
+XTerm*color3:				#d7ff00
 ! BLUE
-XTerm*color4:				#0000d7
 XTerm*color12:				#005fd7
+XTerm*color4:				#005fff
 ! MAGENTA
-XTerm*color5:				#8700d7
-XTerm*color13:				#d700d7
+XTerm*color13:				#8700d7
+XTerm*color5:				#af00ff
 ! CYAN
-XTerm*color6:				#0087d7
-XTerm*color14:				#00d787
+XTerm*color14:				#00AFD7
+XTerm*color6:				#00d7ff
 ! WHITE
-XTerm*color7:				#d7d7d7
+XTerm*color7:				#ffd7d7
 XTerm*color15:				#ffffff
 
 
@@ -148,27 +148,27 @@ URxvt.keysym.C-M-Right:			\033[1;7C
 
 ! Color scheme ----------------------------
 ! BLACK
-*color0:				#000000
-*color8:				#808080
+*color0:				#080808
+*color8:				#767676
 ! RED
-*color1:				#870000
-*color9:				#d70000
+*color1:				#d70000
+*color9:				#E61F1A
 ! GREEN
-*color2:				#008700
-*color10:				#00d700
+*color2:				#00af00
+*color10:				#00D700
 ! YELLOW
-*color3:				#d78700
-*color11:				#d7d700
+*color3:				#ffd700
+*color11:				#d7ff00
 ! BLUE
-*color4:				#0000d7
-*color12:				#005fd7
+*color4:				#005fd7
+*color12:				#005fff
 ! MAGENTA
 *color5:				#8700d7
-*color13:				#d700d7
+*color13:				#af00ff
 ! CYAN
-*color6:				#0087d7
-*color14:				#00d787
+*color6:				#00AFD7
+*color14:				#00d7ff
 ! WHITE
-*color7:				#d7d7d7
+*color7:				#ffd7d7
 *color15:				#ffffff
 
