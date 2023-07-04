@@ -81,7 +81,7 @@ URxvt.depth:				32
 URxvt.background:			[77]#0D0D0D
 URxvt.foreground:			#ffffff
 URxvt.internalBorder:			3
-URxvt.borderColor:			[85]#0D0D0D
+URxvt.borderColor:			[77]#0D0D0D
 URxvt.cursorBlink:			false
 URxvt.cursorUnderline:			false
 URxvt.cursorColor:			#00FF00
