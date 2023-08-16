@@ -1,11 +1,12 @@
 """ """ """ """ """ """ """ vim configuration (for usage as ~/.vimrc and /root/.vimrc)
 
 syntax on
+"set filetype=conf		" default syntax type
 set clipboard=autoselect	" use X PRIMARY selection
 set noswapfile			" disable swap file
-set shortmess+=I		" disable intro message
-set timeoutlen=333		" shorter delay after Esc key press
-set history=999			" set number of lines of vim command history
+set shortmess+=I		" disable uganda children
+set timeoutlen=300		" shorter delay after Esc key press
+set history=3000		" set number of lines of vim command history
 set laststatus=2		" always show status line
 set autochdir			" working dir is always the same as the file
 set ignorecase			" ignore case when search
@@ -26,7 +27,7 @@ set t_Co=256			" force to use 256 colors
 "set t_ti= t_te=		" disable screen buffer
 set noeb vb t_vb=		" disable beeping
 set fillchars=stlnc:-,vert:\│	" split border and inactive statusline chars
-set whichwrap+=<,>,[,]		" change lines with left/right arrow on start/end of line
+set whichwrap+=<,>,[,]		" change lines with left/right arrow
 "set list			" display TABs
 set listchars=tab:+-		" characters to be used to show TABs
 set title			" enable titles
@@ -36,7 +37,14 @@ if $USER == "root"
 else
     set statusline=%{$USER}\$%3*\ %y\ %1*%F%2*%m%3*\ %{&fileencoding?&fileencoding:&encoding}\ %=%1*%l%3*\ %L,%v\ %1*%P%*
 endif
+
 colorscheme desert
+
+" ctrl+6 to use different keymap in insert mode,
+" but always use english to manipulate vim anyway
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
 
 " change some colors
 hi Normal guibg=NONE ctermbg=NONE
@@ -52,7 +60,7 @@ hi StatusLineNC ctermbg=NONE ctermfg=gray cterm=NONE
 hi Visual ctermfg=NONE ctermbg=black cterm=bold,standout
 hi VertSplit ctermfg=white ctermbg=NONE cterm=underline
 
-" COMMANDS                      MODES
+" COMMANDS                      MODES ~
 ":map     :noremap  :unmap     Normal, Visual, Select, Operator-pending
 ":nm[ap]  :nnoremap :nunmap    Normal
 ":vm[ap]  :vnoremap :vunmap    Visual and Select
@@ -63,13 +71,13 @@ hi VertSplit ctermfg=white ctermbg=NONE cterm=underline
 ":im[ap]  :inoremap :iunmap    Insert
 ":lm[ap]  :lnoremap :lunmap    Insert, Command-line, Lang-Arg
 ":cm[ap]  :cnoremap :cunmap    Command-line
+" repeat cmd action - @:
+" repeat normal/insert mode action - .
 command! W w
 command! Q q
 " alt+backspace
 map <Esc><BS> dvb
 im <Esc><BS> <C-w>
-map <M-BS> dvb
-im <M-BS> <C-W>
 " alt+delete
 nm <Esc>[3;3~ de
 im <Esc>[3;3~ <C-o>de
@@ -86,8 +94,9 @@ nm <silent> <Space> :nohlsearch<Bar>:echo<CR>
 map <C-t> :tabnew<CR>
 " ctrl+c - close tab in normal mode
 nm <C-c> :quit<CR>
-" ctrl+w - write file in normal mode
-nm <C-w> :write!<CR>
+" ctrl+s - write file in normal/insert mode
+nm <C-s> :write!<CR>
+im <C-@> <C-o>:write!<CR>
 " ctrl+q - close session in normal mode
 nm <C-q> :conf qa<CR>
 " unmap shift+q in normal mode
@@ -96,24 +105,22 @@ nm Q <Nop>
 nm <C-u> :edit!<CR>
 " alt+c - yank selected to clipboard
 vm <Esc>c "+y
-vm <M-c> "+y
 " alt+x - cut selected to clipboard
 vm <Esc>x "+x
-vm <M-x> "+x
 " ctrl+v - paste from clipboard in visual/insert/normal mode
 vm <C-v> "+gp
 map! <C-v> <C-R>+
 " ctrl+d - remove all letters or spaces near cursor
 im <C-d> <C-o>ciW
 nm <C-d> ciW
-" ctrl+f - number of search matches
+" ctrl+f - count search matches
 nm <C-f> :%s///gn<CR>
 " ctrl+n to show/hide line numbers
 nm <C-n> :set invnumber<CR>
 " ctrl+l show/hide TAB characters
 nm <C-l> :set list!<CR>
-" ctrl+alt+w - write file with sudo
-nm <Esc><C-w> :silent write !sudo tee %<CR>
+" ctrl+alt+y - write file with sudo
+nm <Esc><C-y> :silent write !sudo tee %<CR>
 " ctrl+up/down - home/end
 nm <C-up> 0
 nm <C-down> $
@@ -140,7 +147,7 @@ im <C-M-right> <C-o>W
 " add tabs to selected text
 vmap <Tab> >gv
 vmap <S-Tab> <gv
-" up/down using same line if long
+" up/down in same line
 nm <Up> gk
 nm <Down> gj
 im <Up> <C-o>gk
@@ -148,6 +155,14 @@ im <Down> <C-o>gj
 " F3/F4 - split vertically/horizontally
 nm <F3> :vsplit<CR>
 nm <F4> :split<CR>
+" ctrl+del - delete characer from begining of line
+function! DeleteFirstChar()
+	let save_pos = getpos(".")
+	normal! 0x
+	call setpos(".", save_pos)
+endfunction
+nm <Esc>[3;5~ :call DeleteFirstChar()<CR>
+im <Esc>[3;5~ <C-o>:call DeleteFirstChar()<CR>
 
 " Auto paste mode when insert
 if exists('$DISPLAY')
@@ -164,8 +179,11 @@ endif
 " check file changes every 4s and update file if it was changed
 set autoread | au CursorHold * checktime | call feedkeys("lh")
 
-" restore last cursor position on start
+" restore last cursor position
 if has('autocmd')
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" twig syntax
+au BufRead,BufNewFile *.twig set syntax=smarty
 
