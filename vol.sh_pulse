@@ -6,4 +6,4 @@ case $@ in
 esac
 
 VOL="$(pulsemixer --get-volume | awk '{print $1}')"
-echo "Vol $VOL%" | dzen2 -p 1 -bg gray4 -fg white -fn -13:Bold -h 27
+echo "Vol $VOL%" | dzen2 -p 1 -bg gray4 -fg white -fn -14:Bold -h 30
